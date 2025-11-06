@@ -9,7 +9,7 @@ export const register = async (req, res) => {
     if (!name || !email || !password) {
       return res.status(400).json({
         message: "All fields are required",
-      });
+      }); // use status(400) for bad request, if your frontend uses Axios and you don't have status(400), it will not trigger the catch block, because Axios only treats >=400 as an error.
     }
 
     const existing = await User.findOne({ email });
