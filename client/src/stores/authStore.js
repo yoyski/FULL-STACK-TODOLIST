@@ -28,5 +28,5 @@ export const useAuthStore = create((set) => ({
     } catch (err) {
       set({ user: null, isAuthenticated: false, loading: false });
     }
-  },
+  },//this helps to check auth even on page refresh, without this, if the page is refreshed, the user will be logged out because the user will equal to null
 }));
