@@ -85,4 +85,4 @@ export const getMe = async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Server error" });
   }
-}; // this function is used to get the logged in user's info while the cookie is still valid
+}; // this function is used to get the logged in user's info if the cookie is still valid
